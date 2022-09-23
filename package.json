@@ -11,6 +11,7 @@
   "author": "Diego Schmitz",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^10.6.0"
+    "cypress": "^10.6.0",
+    "faker": "^5.5.3"
   }
 }
