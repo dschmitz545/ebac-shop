@@ -1,0 +1,16 @@
+{
+  "name": "lojaebac",
+  "version": "1.0.0",
+  "description": "Projeto teste e2e lojaebac",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "start": "npx cypress run -b chrome"
+  },
+  "keywords": [],
+  "author": "Diego Schmitz",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.6.0"
+  }
+}
