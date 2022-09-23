@@ -1,13 +1,18 @@
 import LoginPage from '../pages/LoginPage';
 import login_factory from '../factories/login_factory';
 
-describe("Pagina de login", () => {
+describe("Estando na rota minha-conta", () => {
 
     let loginPage = new LoginPage()
     let ebacUser = login_factory.ebacUser();
 
-    it("devo estar na pagina de login", () => {
+    before(function () {
         loginPage.init()
+    })
+
+    afterEach(function () {
+        loginPage.validarLogin()
+        loginPage.logoutForm()
     })
 
 
@@ -15,15 +20,11 @@ describe("Pagina de login", () => {
 
         loginPage.registerForm(ebacUser)
         loginPage.registerFormEnviar()
-        loginPage.validarLogin()
-        loginPage.logoutForm()
     })
 
     it("usuário deve se logar", () => {
 
         loginPage.loginForm(ebacUser)
         loginPage.loginFormEnviar()
-        loginPage.validarLogin()
-        loginPage.logoutForm()
     })
 })

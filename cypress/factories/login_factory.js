@@ -8,7 +8,7 @@ export default {
         let data = {
             name: `${firstName}${lastName}`,
             email: faker.internet.email(firstName),
-            password: "?AbacatePera?",
+            password: "?CeuAzul32?",
 
         }
 
