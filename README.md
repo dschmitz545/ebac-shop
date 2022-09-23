@@ -2,13 +2,19 @@
 
 Exemplo de um teste end to end usando cypress
 
-## Executar projeto com interface cypress visivel
+## Instalar o projeto
+
+```bash
+npm install
+```
+
+## Executar com interface do cypress
 
 ```bash
 npm test
 ```
 
-## Executar diretamente os teste no terminal
+## Executar em modo headless
 
 ```bash
 npm start
