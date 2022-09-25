@@ -5,30 +5,30 @@ class LoginPage {
     }
 
     registerForm(ebacUser) {
-        cy.get('#reg_email').type(ebacUser.email)
-        cy.get('#reg_password').type(ebacUser.password)
+        cy.get('#reg_email').focus().clear().type(ebacUser.email)
+        cy.get('#reg_password').focus().clear().type(ebacUser.password)
     }
 
     registerFormEnviar() {
-        cy.get('input[value="Register"]').click()
+        cy.get('input[value="Register"]').focus().click()
 
     }
 
     loginForm(ebacUser) {
-        cy.get('#username').type(ebacUser.email)
-        cy.get('#password').type(ebacUser.password)
+        cy.get('#username').focus().clear().type(ebacUser.email)
+        cy.get('#password').focus().clear().type(ebacUser.password)
     }
 
     loginFormEnviar() {
-        cy.get('input[value="Login"]').click()
+        cy.get('input[value="Login"]').focus().click()
     }
 
     validarLogin() {
-        cy.get('.woocommerce-MyAccount-content > :nth-child(3)').should("contain", "\n\tA partir do painel de controle de sua conta, você pode ver suas")
+        cy.get('.woocommerce-MyAccount-content > p:nth-child(3)').should("contain", "\n\tA partir do painel de controle de sua conta, você pode ver suas")
     }
 
     logoutForm() {
-        cy.get('li[class="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout"] a').click()
+        cy.get('.woocommerce-MyAccount-navigation li:last-child a').focus().click()
     }
 }
 
